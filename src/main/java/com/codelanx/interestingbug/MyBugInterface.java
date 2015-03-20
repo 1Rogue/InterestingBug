@@ -14,7 +14,7 @@ import com.codelanx.interestingbug.types.ParentType;
  * @author 1Rogue
  * @version 1.0.0
  */
-public interface MyBugInterface {
+public interface MyBugInterface { //Note, if you add a class-level generic witness then this bug resolves itself
 
     default public <T extends ParentType> T getConfig() {
         return this.<T>getData().get(this);
